@@ -1,0 +1,121 @@
+.input {
+    display: flex;
+    width: 90%;
+    position: relative;
+    justify-content: center;
+}
+
+.input__box {
+    width: 100%;
+    border-radius: 50px;
+    padding: 20px 30px;
+    font-size: 25px;
+    border: none;
+    transition: .2s;
+    box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus {
+    box-shadow: 0 0 10px 100px rgba(0, 0, 0, 0.196);
+    outline: none;
+}
+
+.input__submit {
+    position: absolute;
+    right: 0;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+    margin: 12px;
+    cursor: pointer;
+    background-color: rgb(0, 34, 255);
+    color: wheat;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.446);
+    transition: all .2;
+}
+
+.input__submit:hover {
+    background-color: rgb(0, 102, 255);
+}
+
+.input__submit:focus {
+    transform: scale(0.96);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.446);
+    
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 1 50%;
+    background-color: rgb(60, 189, 240);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.remove {
+    background-color: rgb(255, 55, 0);
+}
+
+.todos__heading {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+}
+
+.todos__single {
+    display: flex;
+    background-color: yellow;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 15px;
+    transition: .2s;
+}
+
+.todos__single:hover {
+    transform: scale(1.1);
+}
+
+.todos__single--text {
+    flex: 1;
+    padding: 5px;
+    border: none;
+    font-size: 20px;
+}
+
+.todos__single--text:focus {
+    outline: none;
+}
+
+.icon {
+    margin-left: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+
+    .container {
+        flex-direction: column;
+    }
+}
+
+.dragactive {
+    background-color: rgb(0, 221, 236);
+}
+
+.dragcomplete {
+    background-color: rgb(255, 38, 0);
+}
